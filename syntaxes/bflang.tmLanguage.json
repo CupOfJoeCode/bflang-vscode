@@ -1,0 +1,75 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "BFLang",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#macros"
+		},
+		{
+			"include": "#charconst"
+		},
+		{
+			"include": "#keywords"
+		}
+	],
+	"repository": {
+		"comments": {
+			"patterns": [
+				{
+					"begin": "\\\\",
+					"captures": {
+						"0": {
+							"name": "comment.block.bflang"
+						}
+					},
+					"end": "\\\\",
+					"name": "comment.block.bflang"
+				}
+			]
+		},
+		"macros": {
+			"patterns": [
+				{
+					"begin": ":",
+					"captures": {
+						"0": {
+							"name": "support.function.bflang"
+						}
+					},
+					"end": ":",
+					"name": "support.function.bflang"
+				}
+			]
+		},
+		"charconst": {
+			"patterns": [
+				{
+					"begin": "'",
+					"captures": {
+						"0": {
+							"name": "support.function.bflang"
+						}
+					},
+					"end": "'",
+					"name": "support.function.bflang"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.bflang",
+					"match": "\\b(if|while|main|malloc|copy|add|sub|mul|div|mod|equal|nequal|and|or|not|greater|less|getc|putc|printint|inc|dec|pow)\\b"
+				},
+				{
+					"name": "support.class.bflang",
+					"match": "\\b(define|incmacro|prints)\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "main.bfl"
+}

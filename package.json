@@ -1,0 +1,25 @@
+{
+    "name": "bflang",
+    "displayName": "BFLang",
+    "description": "Syntax highlighting for a custom language which compiles to brainfuck.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.63.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "bflang",
+            "aliases": ["BFLang", "bflang"],
+            "extensions": [".bfl",".bfmacro"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "bflang",
+            "scopeName": "main.bfl",
+            "path": "./syntaxes/bflang.tmLanguage.json"
+        }]
+    }
+}
