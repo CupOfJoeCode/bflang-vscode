@@ -62,7 +62,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.bflang",
-					"match": "\\b(if|while|main|malloc|copy|add|sub|mul|div|mod|equal|nequal|and|or|not|greater|less|getc|putc|printint|inc|dec|pow)\\b"
+					"match": "\\b(if|while|main|malloc|copy|add|sub|mul|div|mod|equal|nequal|and|or|not|greater|less|getc|putc|printint|inc|dec|pow|aload|astore)\\b"
 				},
 				{
 					"name": "support.class.bflang",
